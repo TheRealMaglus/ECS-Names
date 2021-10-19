@@ -124,7 +124,7 @@ public class MicrosoftLogin {
 
     //waits until email field is visible, then inputs into it and click button Next
     wait.until(ExpectedConditions.visibilityOfElementLocated(email)).sendKeys(this.login);
-    driver.findElement(submit).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(submit)).click();
 
     //Double check loop, checks every 1sec if username is invalid or password field is shown(hence assumed username valid)
     // If invalid username, returns false and ends method
